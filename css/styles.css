@@ -1,0 +1,177 @@
+  body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f8f9fa;
+      scroll-behavior: smooth;
+    }
+
+    /* Menú de navegación */
+/* Botón hamburguesa */
+.menu-btn {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1100;
+  background-color: #ffd700;
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Espacio para que el botón no se superponga con el menú */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -240px;
+  width: 220px;
+  height: 100%;
+  background-color: #3e07d6;
+  padding-top: 4rem; /* Aumentamos el espacio superior */
+  box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+/* Mostrar el menú cuando el checkbox está activado */
+#menu-toggle:checked ~ .sidebar {
+  left: 0;
+}
+/* Estilo del menú */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  margin: 1rem 0;
+}
+
+.sidebar ul li a {
+  display: block;
+  color: #f0f0f0;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+  background-color: #ffd700;
+  color: #3f06dd;
+  border-radius: 4px;
+}
+
+/* Ajuste del contenido */
+main {
+  margin-left: 0;
+  padding: 2rem;
+}
+main {
+  margin-left: 240px; /* espacio para el menú lateral */
+  padding: 2rem;
+}
+    header, footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: white;
+      background: linear-gradient(to right, #0074d9, #006699);
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #006699;
+      margin-bottom: 10px;
+    }
+
+    .comparacion, .personajes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .comparacion div, .personajes div {
+      flex: 1;
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .comparacion div:hover, .personajes div:hover {
+      transform: translateY(-5px);
+    }
+
+    .linea-tiempo .evento {
+      margin: 10px 0;
+      padding: 15px;
+      background-color: #e0f0ff;
+      border-left: 5px solid #006699;
+      border-radius: 5px;
+    }
+
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .galeria img {
+      width: 250px;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+
+    button {
+      background-color: #006699;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 10px;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #005080;
+    }
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+      .comparacion, .personajes {
+        flex-direction: column;
+      }
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+
+ .btn {
+  display: inline-block;
+  background-color: #006699;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+.btn:hover {
+  background-color: #004d80;
+}
